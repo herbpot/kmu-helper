@@ -4,3 +4,5 @@
 number.py and arrayCheck.py by inwoo
 
 baseball.py by hyeongu
+
+there is no sudoku
