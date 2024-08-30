@@ -9,10 +9,12 @@ def check(arr):
         return False
 
 
+answer = []
 while True:
-    answer = [rn.randrange(1, 10), rn.randrange(1, 10), rn.randrange(1, 10)]
-    while check(answer):
+    if not answer:
         answer = [rn.randrange(1, 10), rn.randrange(1, 10), rn.randrange(1, 10)]
+        while check(answer):
+            answer = [rn.randrange(1, 10), rn.randrange(1, 10), rn.randrange(1, 10)]
 
     print("숫자 야구 게임을 시작합니다.")
     # print(answer)
@@ -44,6 +46,7 @@ while True:
     if s_cnt == 0 and b_cnt == 0:
         print("OUT")
     elif s_cnt == 3:
+        answer = []
         print("3S")
         print("3개의 숫자를 모두 맞히셨습니다.")
         if input("게임을 새로 시작하려면 Y, 종료하려면 N를 입력하세요.") == 'N':
